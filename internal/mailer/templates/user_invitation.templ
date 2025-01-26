@@ -1,0 +1,16 @@
+{{define "subject"}} finish registration {{end}}
+
+{{define "body"}}
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  </head>
+  <body>
+    <p>hi {{.Username}},</p>
+    <p>thanks for registering with oshaberi. please click this link to verify your email:</p>
+    <p><a href="{{.ActivationURL}}">{{.ActivationURL}}</a></p>
+  </body>
+</html>
+{{end}}

@@ -1,0 +1,15 @@
+services:
+  db:
+    image: postgres
+    container_name: oshaberi-db
+    environment:
+      POSTGRES_DB: oshaberi
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: adminpw
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+volumes:
+  db-data:
